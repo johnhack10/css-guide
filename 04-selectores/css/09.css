@@ -1,0 +1,4 @@
+
+.admin div + p {
+    background-color: red;
+}

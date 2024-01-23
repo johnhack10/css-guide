@@ -1,0 +1,10 @@
+
+/*  ^inician con
+    $finalizan con */
+a[href$=".com"] {
+    color: red;
+}
+
+input[type="tel"] {
+    border: 5px solid red;
+}

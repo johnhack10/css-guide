@@ -1,0 +1,4 @@
+/* ul li:last-child */
+ul li:last-of-type {
+    border: 2px solid red;
+}
