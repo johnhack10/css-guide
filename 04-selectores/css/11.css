@@ -1,0 +1,5 @@
+
+/* ul li:first-child */
+ul li:first-of-type {
+    border: 2px solid red;
+}

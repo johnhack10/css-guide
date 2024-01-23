@@ -1,0 +1,7 @@
+
+/* ul li:nth-child(2n + 1)  4x + 1 = .... */
+/* ul li:nth-child(odd) Pares */
+/* ul li:nth-child(even) Impares */
+ul li:nth-child(3n + 1) {
+    border: 2px solid red;
+}
