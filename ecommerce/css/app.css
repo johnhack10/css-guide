@@ -14,7 +14,9 @@ body {
 
 /** Globales */
 
-h1, h2, h3 {
+h1, 
+h2, 
+h3 {
     font-family: 'Playfair Display', serif;
     margin: 0 0 2rem 0;
 }
@@ -223,7 +225,6 @@ img {
 @media (min-width: 768px) {
     .texto-nosotros {
         grid-column: 2 / 3;
-
     }
 }
 
@@ -449,8 +450,8 @@ img {
 
 .entrada {
     border-bottom: .2rem solid #e1e1e1;
-    padding-bottom: 4rem;
     margin-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 
 .entrada h2 {
@@ -489,8 +490,6 @@ Desktop first
         justify-content: space-between;
     }  
 }
-
-
 
 
 .entrada-meta p {
