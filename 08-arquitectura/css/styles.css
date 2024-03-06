@@ -204,7 +204,7 @@ img {
 }
 
 @media (min-width: 768px) {
-    .slogan h1 {
+    .slogan h2 {
         font-size: 5rem;
     }
 }
