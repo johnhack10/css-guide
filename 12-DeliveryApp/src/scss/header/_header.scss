@@ -1,0 +1,23 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: vars.$separacion 0;
+    align-items: center;
+
+    @include mix.desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 30rem;
+        margin-bottom: 5rem;
+
+        @include mix.desktop {
+            margin-bottom: 0;
+        }
+    }
+}
