@@ -1,0 +1,16 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.testimoniales {
+    padding: vars.$separacion 0;
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__grid {
+        @include mix.tablet {
+            @include mix.grid(5, 2rem);
+        }
+    }
+}
