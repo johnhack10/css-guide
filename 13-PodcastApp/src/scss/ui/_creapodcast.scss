@@ -1,0 +1,15 @@
+@use 'base/variables' as vars; 
+@use 'base/mixins' as mix;
+
+.crea-grid {
+    @include mix.tablet {
+        @include mix.tablet {
+            @include mix.grid(2, 2rem);
+            align-items: center;
+        }
+    }
+
+    h2 {
+        @include mix.headingBorder( vars.$secundario, vars.$primario );
+    }
+}
