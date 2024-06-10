@@ -1,0 +1,28 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.barra {
+    display: none;
+
+    @include mix.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navegacion {
+        @include mix.tablet {
+            display: flex;
+            gap: 4rem;      
+        }        
+    }
+
+    &__link {
+        color: vars.$blanco;
+    }
+
+    &__nombre {
+        color: vars.$blanco;
+        margin: 0;
+    }
+}
