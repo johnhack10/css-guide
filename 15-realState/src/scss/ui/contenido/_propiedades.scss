@@ -1,0 +1,67 @@
+@use 'base/mixins' as mix;
+@use 'base/variables' as vars;
+
+.propiedades {
+    margin-top: 5rem;
+
+    @include mix.tablet {
+        margin-top: 10rem;
+    }
+
+    &__heading {
+        @include mix.heading;
+    }
+
+    &__grid {
+        @include mix.grid(1, 2rem);
+        @include mix.tablet {
+            @include mix.grid(3, 2rem);
+        }
+    }
+}
+
+.propiedad {
+    background-color: vars.$blanco;
+    
+    &__imagen {
+        aspect-ratio: 10 / 6;
+        background-size: auto 150%;
+
+        position: relative;
+    }
+
+    @for $i from 1 through 6 {
+        $imagen: '../img/propiedad_' + $i + '.jpg';
+
+        &:nth-child(#{$i}) &__imagen {
+            background-image: linear-gradient( to bottom, transparentize(vars.$negro, 1%  ) 0%, transparentize( vars.$negro, .3% ) 100% ), url($imagen);
+        }
+    }
+
+    &__nombre {
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        color: vars.$blanco;
+        font-size: 2.4rem;
+    }
+    
+    &__contenido {
+        padding: 2rem;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    &__precio {
+        font-size: 3rem;
+        margin: 0;
+    }
+    
+    &__enlace {
+        @include mix.boton(vars.$primario, vars.$blanco);
+        display: block;
+        text-transform: uppercase;
+    }
+}
