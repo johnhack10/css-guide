@@ -1,0 +1,14 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.header {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mix.tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

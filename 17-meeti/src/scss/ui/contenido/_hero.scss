@@ -1,0 +1,24 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.hero {
+    min-height: 60rem;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    
+    &__texto {
+        max-width: 60rem; 
+        color: vars.$blanco;
+    }
+    &__enlace {
+        @include mix.boton(vars.$terciario, vars.$blanco);
+    }
+}

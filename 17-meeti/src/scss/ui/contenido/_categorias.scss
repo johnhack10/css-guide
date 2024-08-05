@@ -1,0 +1,29 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.categorias {
+    background-color: vars.$grisClaro;
+    padding: 5rem 0;
+
+    &__heading {
+        @include mix.heading;
+    }
+    &__grid {
+        margin-top: 5rem;
+        @include mix.grid(1, 4rem);
+        @include mix.tablet {
+            @include mix.grid(2, 2rem);
+        }
+        @include mix.desktop {
+            @include mix.grid(3, 2rem);
+        }
+    }
+}
+
+.categoria {
+    &__nombre {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+}
