@@ -1,0 +1,29 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.cita {
+    background-image: url(../img/bg_citas.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5rem 0;
+    text-align: center;
+
+    &__heading {
+        @include mix.heading;
+        color:  vars.$blanco;
+        font-size: 6rem;
+    }
+
+    &__texto {
+        max-width: 60rem;
+        margin: 0 auto;
+        color: vars.$blanco;
+        line-height: 2;
+    }
+
+    &__enlace {
+        @include mix.boton(vars.$primario, vars.$blanco);
+        padding: 2rem 10rem;
+    }
+}

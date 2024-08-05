@@ -1,0 +1,58 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.cards {
+    &__grid {
+        @include mix.tablet {
+            @include mix.grid(3, 2rem);
+        }
+    }
+
+}
+
+.card {
+    max-width: 35rem;
+    margin: 0 auto 2rem auto;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    @include mix.tablet {
+        max-width: unset;
+        margin: 0;
+    }
+
+    &__imagen {
+        width: 100%;
+        border: .5rem solid vars.$blanco;
+        transition-property: rotate scale;
+        transition-duration: 300ms;
+
+        &:hover {
+            transform: rotate(4deg) scale(1.3);
+        }
+    }
+
+    &__contenido {
+        max-width: 90%;
+        background-color: vars.$blanco;
+
+        // Estos dos códigos hacen lo mismo
+        // margin: -5rem auto 0 auto;
+        // position: relative;
+        margin: 0 auto;
+        transform: translateY(-5rem);
+    }
+
+    &__heading {
+        @include mix.headingCursiva;
+        font-size: 3.4rem;
+        padding: 2rem 0;
+    }
+
+    &__enlace {
+        @include mix.boton(vars.$secundario, vars.$blanco);
+        display: block;
+    }
+}
