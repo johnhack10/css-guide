@@ -1,0 +1,17 @@
+@use 'base/mixins' as mix;  
+
+.header {
+    padding-top: 5rem;
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        @include mix.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

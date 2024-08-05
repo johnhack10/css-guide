@@ -1,0 +1,18 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.bienvenida {
+    text-align: center;
+
+    &__heading {
+        @include mix.headingCursiva;
+    }
+
+    &__texto {
+        font-size: 2.6rem;
+        color: vars.$gris;
+        max-width: 50rem;
+        margin: 4rem auto 0 auto;
+        line-height: 1.8;
+    }
+}
