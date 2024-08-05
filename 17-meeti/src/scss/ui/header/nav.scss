@@ -1,0 +1,43 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__enlace {
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include mix.tablet {
+            margin: 0
+        }
+
+        &--crear {
+            font-weight: 700;
+            color: vars.$primario;
+
+            @include mix.tablet {
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    height: 4rem;
+                    border-right: 2px solid vars.$grisClaro;
+                    margin: 0 0 0 2rem;
+                }
+            }
+        }
+    }
+
+    @include mix.tablet {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,19 @@
+@use 'base/variables' as vars;
+
+.sidebar {
+    &__contenido {
+        background-color: vars.$secundario;
+        padding: 2rem;
+        text-align: center;
+    }
+    &__heading,
+    &__texto {
+        color: vars.$blanco;
+    }
+    &__label {
+        font-weight: 700;
+    }
+    &__mapa {
+        width: 100%;
+    }
+}

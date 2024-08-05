@@ -1,0 +1,36 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.busqueda {
+    background-color: vars.$grisClaro;
+    padding: 5rem 0;
+
+    &__heading {
+        @include mix.heading;
+    }
+}
+
+.formulario {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include mix.tablet {
+        @include mix.grid(4, 3rem);
+    }
+    
+    &__campo {
+        padding: 1rem;
+        border: 1px solid lighten($color: vars.$gris, $amount: 50%);
+        margin-bottom: 2rem;
+
+        @include mix.tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &__submit {
+        @include mix.boton(vars.$primario, vars.$blanco);
+        margin-top: 0;
+    }
+}
