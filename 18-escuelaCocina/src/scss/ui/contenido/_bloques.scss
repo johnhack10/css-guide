@@ -1,0 +1,58 @@
+@use 'base/mixins' as mix;
+@use 'base/variables' as vars;
+
+.bloques {
+
+    &__grid {
+        @include mix.tablet {
+            @include mix.grid(2, 0rem);
+            grid-auto-flow: dense;
+        }
+    }
+}
+
+.bloque {
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:nth-child(1) {
+        background-color: vars.$primario;
+    }
+
+    &:nth-child(2) {
+        @include mix.bgImage('../img/bloque_1.jpg');
+    }
+
+    &:nth-child(3) {
+        background-color: vars.$secundario;
+        @include mix.tablet {
+            grid-column: 2 / 3;
+        }
+    }
+
+    &:nth-child(4) {
+        @include mix.bgImage('../img/bloque_2.jpg');
+    }
+
+    &__contenido {
+        max-width: 40rem;
+        
+        // border-top: 1px solid vars.$blanco;
+        // border-bottom: 1px solid vars.$blanco;
+        border-block: 1px solid vars.$blanco;
+        color: vars.$blanco;
+        padding: 1rem 0;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+    }
+
+    &__texto {
+        font-size: 2rem;
+    }
+}

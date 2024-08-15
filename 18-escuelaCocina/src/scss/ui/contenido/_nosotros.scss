@@ -1,0 +1,23 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.nosotros {
+    padding: 5rem 0;
+    &__heading {
+        @include mix.heading;        
+    }
+
+    &__grid {
+        @include mix.tablet {
+            @include mix.grid(3, 2rem);
+        }
+    }
+
+    &__bloque {
+        text-align: center;
+    }
+
+    &__imagen {
+        margin: 0 auto;
+    }
+}
