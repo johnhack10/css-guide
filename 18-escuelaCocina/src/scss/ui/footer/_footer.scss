@@ -1,0 +1,23 @@
+@use 'base/variables' as vars;
+@use 'base/mixins' as mix;
+
+.footer {
+    padding: 3rem 0;
+    border-bottom: .5rem solid vars.$primario;
+
+    &__grid {
+        @include mix.tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__copyright {
+        text-align: center;
+        font-size: 2.4rem;
+        margin-top: 3rem;
+
+        @include mix.tablet {
+            margin: 0;
+        }
+    }
+}
